@@ -1,0 +1,19 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+RewriteRule ^index$ index.php?modul=1
+RewriteRule ^$ home
+RewriteRule ^home$ index.php?modul=1
+RewriteRule ^about$ index.php?modul=2
+RewriteRule ^features$ index.php?modul=3
+RewriteRule ^career$ index.php?modul=4
+RewriteRule ^gallery$ index.php?modul=5
+RewriteRule ^contact$ index.php?modul=6
+RewriteRule ^not-found$ index.php?modul=100
+RewriteRule ^admin$ lumino2
+RewriteRule ^banner_(.*)$ index.php?modul=7&isi=event_promo&id=$1 
+RewriteRule ^produk_(.*)$ index.php?modul=7&isi=produk&id=$1 
+RewriteRule ^artikel_(.*)$ index.php?modul=7&isi=artikel&id=$1 [L]
+RewriteRule ^fitur_(.*)$ index.php?modul=7&isi=fitur&id=$1 [L]
+Options All -Indexes
+</IfModule>
